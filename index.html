@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Docunment</title>
+<!-- Boostrap 4 CSS -->
+<!-- Boostrap 4 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Boostrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+@font-face {
+    font-family: Poppins;
+    src: url("./font/Poppins/Poppins-Black.ttf");
+}
+
+@font-face {
+    font-family: PoppinReg;
+    src: url("./media/font/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: PoppinMed;
+    src: url('./font/Poppins/Poppins-Medium.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #2936A2;
+    min-height: 100vh;
+}
+.arrowBtn{
+    width: 20px;
+    transition: 0.5s linear;
+}
+.loginBtns1{
+    color: #79C91B;
+    font-family:"azo-sans-web";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    padding-left: 2px; 
+}
+.logLink{
+    text-decoration: none;
+}
+.logLink:hover .arrowBtn{
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+ .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 12px;
+            font-family: azo-sans-web, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 2px;
+            transition: 0.2s linear;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover
+        {
+            color: #79C91B;
+            font-size: 12px;
+            font-family: azo-sans-web, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+       
+
+        .nav-link {
+            position: relative;
+        }
+        
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 20px;
+            background: linear-gradient(to right, #70C618, #C1FA7F);
+            height: 2px;
+            width: 0%;
+        }
+
+        .nav-link:hover::before {
+            width: 80%;
+            transition: 0.3s normal;
+        }
+
+        @media (max-width: 768px) {
+           .nav-link:hover::before {
+                width: 25%;
+                transition: 0.2s normal;
+            }
+        }
+
+
+.partnership-section{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:62px;
+  
+}
+.partners-heading{
+        color:#FFFFFF;
+        font-weight:bold;
+        font-family:"Azo Sans";
+        font-size:50px;
+       
+    }
+    .para{
+      color:#79C91B;
+      font-size:24px;
+      padding-top:13px;
+    }
+   
+    .speach-image{
+       /* width:835px;
+        height:566px;*/
+        position:relative;
+        animation: roundbox 2s infinite linear;
+        animation-direction:normal;
+    }
+    @keyframes roundbox {
+   0%{left:0px; bottom:0px;}
+   50%{left:0px;bottom:75px}
+   100%{left:0px; bottom:10px;}
+
+    }
+    
+    .partnershipCard{
+    width: 296px;
+    height: 296px;
+    background-color: #20267B;
+    border-radius: 30px;
+    padding: 30px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    
+}
+
+ .partnershipCard:hover .card-heading{
+    color: #0063C5;
+    transition:0.5 linear;
+    
+}
+.partnershipCard::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s linear;
+}
+
+
+.partnershipCard:hover::before{
+    background: url("Panel.png");
+    top: 0%;
+    overflow: hidden;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .partnershipCard{
+        width: 260px;
+        height: 260px;
+       
+    }  
+}   
+
+.card-heading{
+    font-family:"azo-sans-web";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(255,255,255,0.5);
+    width: 165px;
+   
+}
+
+
+.number{
+    background-color: #79C91B;
+    border: none;
+    width: 36px;
+    height: 36px;
+    transform: rotate(45deg);
+    border-radius: 7px;
+}
+.number-txt{
+    color: white;
+    display: inline-block;
+    transform: rotate(-45deg);
+    text-align: center;
+}
+.work-heading{
+    color: #fff;
+    font-size: 40px;
+    font-family: azo-sans-web, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.work-desc{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: azo-sans-web, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+.footer-section{
+        margin:20px;
+
+    }
+    .footer-part{
+        display:flex;
+        justify-content:space-around;
+    }
+.footer-title{
+    font-family: "Azo Sans";
+    font-weight:700;
+    font-size:20px;
+    color:white; 
+    position:relative;
+}
+.footer-title::after{
+    position:absolute;
+    content:"";
+    top:50%;
+    left:0;
+    border-bottom:2px solid #79C91B;
+    width:105px;
+   
+}
+
+.form-input{
+    font-family: "Azo Sans";
+    font-weight:400;
+    font-size:12px;
+    border-radius:30px;
+    border-width:0px;
+    width:210px;
+    height:40px;
+    padding:10px;
+    background-color:rgb(255, 255, 255,0.05);  
+    margin-bottom:10px; 
+}
+ form .form-control::-webkit-input-placeholder { 
+    color: #FFFFFF;
+  } 
+ 
+  
+
+.button{
+    font-family: "Azo Sans";
+    font-weight:400;
+    font-size:12px;
+    color:#FFFFFF; 
+    border-radius:30px;
+    border-width:0px;
+    padding:10px;
+    width:210px;
+    height:40px;
+    background-color:#79C91B;
+    padding-left:20px;
+    display:flex;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    
+}
+.footer-para{
+    font-family: "Azo Sans";
+    font-weight:400;
+    font-size:14px;
+    color:#FFFFFF; 
+}
+
+.contact-number{
+    color:#FFFFFF; 
+}
+.contact-number:hover{
+    color:#79C91B;
+    text-decoration:none;
+}
+
+.address{
+
+    font-family: "Azo Sans";
+    font-weight:400;
+    font-size:14px;
+    color:#FFFFFF; 
+}
+.list-container{
+    list-style-type: none;
+    padding-left:0;
+
+}
+.links{
+    font-family: "Azo Sans";
+    font-weight:400;
+    font-size:13px;
+    color:#FFFFFF; 
+}
+.links:hover{
+    color:#79C91B;
+    text-decoration:none;
+}
+.icon{
+    color:white;
+    font-size:24px;
+    transition:0.5s linear;
+}
+.icon:hover{
+    color:blue;
+}
+
+.copyright{
+    color:white;
+}
+    
+</style>
+<body>
+   
+    <main>
+       
+        <header>
+           
+            <nav class="navbar navbar-expand-md bg-transparent navbar-dark">
+                
+                    <a class="navbar-brand" href="#0">
+                        <img src="Logo.png" alt="wlogo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <span class="icon-bars"></span>
+                    
+                    </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav pt-3 ml-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">TECHNOLOGY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FLEXIBILITY</a>
+                            </li>
+                            <li class="nav-item d-block d-md-none d-lg-block ">
+                                <a class="nav-link"  href="#">PARTNERSHIPS</a>
+                            </li>
+                            <li class="nav-item d-block d-md-none d-lg-block">
+                                <a class="nav-link" href="#">CASE STUDIES</a>
+                            </li>
+                            <li class="nav-item d-block d-md-none d-lg-block">
+                                <a class="nav-link" href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item d-block d-md-none d-lg-block">
+                                <a class="nav-link" href="#">ABOUT</a>
+                            </li>
+                            <li class="nav-item d-block d-md-none d-lg-block">
+                                <a class="nav-link" href="#">CONTACT</a>
+                            </li>
+                            <li class="nav-item pl-lg-3 pt-1">
+                                <a href="#0" class="logLink">
+                                    <img src="aroww1.png" alt="path" class="arrowBtn">
+                                    <span class="loginBtns1">LOGIN</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+             
+            </nav>
+
+</header>
+
+
+
+    <section class="partnership-section">
+    <div class="container-fluid ">
+        <div class="row">
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+               <h1 class="partners-heading">Partnerships heading heading</h1>
+            <p class="para">Morb non ultricies diam sonec sits amet condimentum nibh.Hestibes lumesees pellentesques</p>
+       
+    </div>
+        <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12 ">  
+        <img src="Speach bubble 2 v2.png" class="img-fluid speach-image">
+            </div>
+       
+        </div>
+    
+
+</section>
+
+
+<section class="partnership&services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center flex-wrap">
+                <div class="partnershipCard  m-3">
+                    <button class="number">
+                        <span class="number-txt">01</span>
+                    </button>
+                    <h4 class="card-heading">Tech Providers</h4>
+                    <a href="#0" class="icon-arrow-right"></a>
+                   
+                </div>
+                <div class="partnershipCard  m-3">
+                    <button class="number">
+                        <span class="number-txt">02</span>
+                    </button>
+                    <h4 class="card-heading">R & D Projects</h4>
+                    <a href="#0" class="icon-arrow-right "></a>
+                </div>
+                <div class="partnershipCard  m-3">
+                    <button class="number">
+                        <span class="number-txt">03</span>
+                    </button>
+                    <h4 class="card-heading">Energy Consultants</h4>
+                    <a href="#0" class="icon-arrow-right "></a>
+                </div>
+                <div class="partnershipCard m-3">
+                    <button class="number">
+                        <span class="number-txt">04</span>
+                    </button>
+                    <h4 class="card-heading">Renewable</h4>
+                    <a href="#0" class="icon-arrow-right "></a>
+                </div>
+            </div>
+            <div class="partnershipText col-12 col-lg-4">
+                <h2 class="work-heading">How our
+                    Partnerships work
+                </h2>
+                <p class="work-desc">
+                    Morbi non ultricies diam sonec sit amet condimentum nibh. Vestibu lumesees pellentes ques.
+                    Morbi non ultricies diam sonec sit amet condimentum nibhes.
+                </p>
+                <p class="work-desc">
+                    Morbi non ultricies diam sonec sit amet condimentum nibh. Vestibu lumesees pellentes ques.
+                    Morbi non ultricies diam sonec sit amet condimentum nibhes.
+                </p>
+                <p class="work-desc">
+                    Morbi non ultricies diam sonec sit amet condimentum nibh. Vestibu lumesees pellentes ques.
+                    Morbi non ultricies diam sonec sit amet condimentum nibhes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+               
+                
+
+
+
+
+<footer class="footer-section pt-5">
+    <div class="footer-part">
+<div class="container">
+    <div class="row">
+       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3">
+           <h4 class="footer-title pb-5">Newsletter</h4>
+           <form pb-5>
+               <input type="text" placeholder="Name" class="form-input form-control">
+               <input type="email" placeholder="Email address" class="form-input form-control">
+               <button type="submit d-block" class="button form-control">SUBMIT<a href="#0" class="icon-arrow-right icon"></a></button>
+           </form>
+       </div>
+
+       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 pb-5">
+           <h4 class="footer-title pb-5">Get in touch</h4>
+           <p class="footer-para">Call<a href="#" class="contact-number"> +44 (0)1749 372198</a></p>
+           <p class="footer-para">Email<a href="#" class="contact-number"> info@gridimp.com</a></p>
+
+           <address class="address">Gridimp Ltd <br>
+               Wells  Enterprise Centre<br>
+               Cathedral Avenue<br>
+               Wells BA5 1JJ</address>
+           
+       </div>
+
+       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3">
+           <h4 class="footer-title pb-5">Quick Links</h4>
+           <ul class="list-container">
+               <li><a class="links" href="#">PRODUCTS</a></li>
+               <li><a href="#" class="links">FLEXIBILITY</a></li>
+               <li><a href="#" class="links">PARTNERSHIPS</a></li>
+               <li><a href="#" class="links">CASE STUDIES</a></li>
+               <li><a href="#" class="links">BLOG</a></li>
+               <li><a href="#" class="links">ABOUT</a></li>
+               <li><a href="#" class="links">CONTACT</a></li>
+
+           </ul>
+
+       </div>
+
+       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3">
+           <h4 class="footer-title pb-5 ">Social</h4>
+           <div>
+               <a href="#" class="icon-linkedin icon"></a>
+               <a href="#" class="icon-facebook icon"></a>
+               
+           </div>
+       </div>
+    </div>   
+
+</div>
+</div>
+<div class="container-fluid pb-3">
+   <div class="row d-flex align-items-center">
+       <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12 text-center">
+           <small class="copyright">&copy; Copyright 2021 Gridimp Ltd.All Rights Reserved.Privacy | Terms | Careers</small>
+       </div>
+       <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+           <img src="Logo.png">
+
+       </div>
+      
+
+   </div>
+
+</div>
+
+</footer>
+
+
+
+</main>
+</body>
+</html>
