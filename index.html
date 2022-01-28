@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -40,6 +40,7 @@ body{
     background-color: #2936A2;
     min-height: 100vh;
 }
+
 .arrowBtn{
     width: 20px;
     transition: 0.5s linear;
@@ -128,6 +129,7 @@ body{
        
     }
     .para{
+      font-family:"Azo Sans";
       color:#79C91B;
       font-size:24px;
       padding-top:13px;
@@ -256,15 +258,18 @@ body{
    
     
 .footer-section{
-        margin:20px;
-
+  padding-left:80px; 
+   
     }
     .footer-part{
         display:flex;
-        justify-content:space-around;
+    justify-content:center;  
+   
     }
+      
+    
 .footer-title{
-    font-family: "Azo Sans";
+    font-family:"Azo Sans";
     font-weight:700;
     font-size:20px;
     color:white; 
@@ -299,7 +304,7 @@ body{
   
 
 .button{
-    font-family: "Azo Sans";
+    font-family:"Azo Sans";
     font-weight:400;
     font-size:12px;
     color:#FFFFFF; 
@@ -339,7 +344,7 @@ body{
 
 .address{
 
-    font-family: "Azo Sans";
+    font-family:"Azo Sans";
     font-weight:400;
     font-size:14px;
     color:#FFFFFF; 
@@ -350,11 +355,11 @@ body{
 
 }
 .links{
-    font-family: "Azo Sans";
+    font-family:"Azo Sans";
     font-weight:400;
     font-size:13px;
     color:#FFFFFF; 
-    transition:.1s linear;
+    transition:.1s all linear;
 }
 .links:hover{
     color:#79C91B;
@@ -363,7 +368,7 @@ body{
 .icon{
     color:white;
     font-size:24px;
-    transition:.1s linear;
+    transition:.1s all linear;
 }
 .icon:hover{
     color:blue;
@@ -381,7 +386,7 @@ body{
         <header>
            
             <nav class="navbar navbar-expand-md bg-transparent navbar-dark">
-                
+                <div class="container-fluid">
                     <a class="navbar-brand" href="#0">
                         <img src="Logo.png" alt="wlogo">
                     </a>
@@ -421,7 +426,7 @@ body{
                             </li>
                         </ul>
                     </div>
-             
+                </div>
             </nav>
 
 </header>
@@ -447,7 +452,7 @@ body{
 
 
 <section class="partnership&services">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center flex-wrap">
                 <div class="partnershipCard  m-3">
@@ -512,7 +517,7 @@ body{
 
 <footer class="footer-section pt-5">
     <div class="footer-part">
-<div class="container">
+<div class="container-fluid">
     <div class="row">
        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3">
            <h4 class="footer-title pb-5">Newsletter</h4>
